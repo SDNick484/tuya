@@ -6,7 +6,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-import tuya
+from tuya.const import __author__, __version__
 
 
 if len(sys.argv) <= 1:
@@ -32,8 +32,8 @@ else:
 
 setup(
     name='tuya',
-    author=tuya.__author__,
-    version=tuya.__version__,
+    author=__author__,
+    version=__version__,
     description='Python interface to Tuya WiFi smart devices.',
     long_description=long_description,
     long_description_content_type='text/markdown',
